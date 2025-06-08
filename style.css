@@ -1,0 +1,177 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Pacifico&display=swap');
+
+/* Variabel Warna Tema */
+:root {
+    --bg-color: #FDF6F6;
+    --page-color: #FFFFFF;
+    --accent-color: #E8C2CA;
+    --accent-dark-color: #D1A3AE;
+    --text-color: #5D5455;
+    --text-light-color: #8B787A;
+    --border-color: #EAE0E0;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Lora', serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 40px 20px;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Tema Utama "Buku Diary" untuk Card */
+.card {
+    background-color: var(--page-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    padding: 30px 35px;
+    margin-bottom: 30px;
+    transition: transform 0.2s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* Typography & Links */
+h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.2em;
+    font-weight: 400;
+    color: var(--accent-color);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px dashed var(--border-color);
+}
+a { color: var(--accent-dark-color); text-decoration: none; font-weight: 600; }
+a:hover { text-decoration: underline; }
+
+/* User Header & Menu */
+.user-header { text-align: right; margin-bottom: 15px; font-size: 0.95em; color: var(--text-light-color); }
+.user-header a { color: var(--accent-dark-color); }
+.main-nav { display: flex; justify-content: center; background-color: #ffffff; padding: 0; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); list-style: none; }
+.main-nav li { flex-grow: 1; }
+.main-nav a { display: block; padding: 15px; text-align: center; text-decoration: none; color: var(--text-color); font-weight: 600; transition: background-color 0.2s; border-radius: 8px; }
+.main-nav a.active { background-color: var(--accent-color); color: #ffffff; box-shadow: none; }
+.main-nav a:hover { background-color: #F1E6E7; }
+
+/* Form & Input Elements */
+textarea, input[type="text"], input[type="password"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    font-family: 'Lora', serif;
+    font-size: 1em;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px var(--accent-color);
+}
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+}
+button[type="submit"]:hover { background-color: var(--accent-dark-color); }
+
+/* Pilihan Mood dengan Ikon Besar */
+.mood-selector { display: flex; justify-content: space-around; margin-bottom: 25px; flex-wrap: wrap; gap: 10px; }
+.mood-selector input[type="radio"] { display: none; }
+.mood-option { text-align: center; }
+.mood-option label { display: flex; flex-direction: column; align-items: center; padding: 10px; border-radius: 12px; cursor: pointer; border: 2px solid transparent; transition: background-color 0.2s ease, border-color 0.2s ease; min-width: 80px; }
+.mood-option label:hover { background-color: #FDF6F6; }
+.mood-selector input[type="radio"]:checked + label { background-color: #F1E6E7; border-color: var(--accent-color); }
+.emoji-icon { font-size: 2.8em; transition: transform 0.2s ease; }
+.mood-selector input[type="radio"]:checked + label .emoji-icon { transform: scale(1.15); }
+.emoji-text { font-size: 0.9em; font-weight: 600; color: var(--text-light-color); margin-top: 5px; }
+
+/* Mood Feed Specific Styles */
+.history-list { list-style: none; padding: 0; }
+.history-item { padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px dashed var(--border-color); }
+.history-item:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+.post-main { background-color: var(--bg-color); border: 1px solid var(--border-color); border-radius: 8px; padding: 20px; position: relative; }
+.mood-entry-header { display: flex; align-items: flex-start; gap: 15px; }
+.history-mood { font-size: 2.5em; }
+.history-content { flex-grow: 1; }
+.history-meta, .reply-meta { color: var(--text-light-color); font-size: 0.9em; }
+.history-note { margin: 5px 0 0 0; }
+.reply-section { margin-top: 15px; padding-left: 20px; }
+.reply-item { position: relative; background-color: #FDF6F6; padding: 12px 15px; border-radius: 8px; margin-bottom: 10px; }
+.reply-text { font-size: 0.95em; margin: 5px 0 0 0; }
+
+/* Tombol Aksi (Edit & Hapus) */
+.actions { display: flex; gap: 8px; align-items: center; position: absolute; top: 15px; right: 15px; }
+.actions a, .actions button { font-size: 1.4em; background: none; border: none; cursor: pointer; padding: 5px; margin: 0; display: flex; align-items: center; justify-content: center; border-radius: 50%; width: 38px; height: 38px; text-decoration: none; color: var(--text-light-color); transition: background-color 0.2s, color 0.2s; }
+.actions a:hover, .actions button:hover { background-color: #EAE0E0; color: var(--text-color); }
+.actions form { display: inline; }
+.reply-actions { position: absolute; top: 5px; right: 5px; }
+
+/* ========================================================== */
+/* === PERBAIKAN: Style untuk Form Balasan === */
+/* ========================================================== */
+.reply-form {
+    /* Menghapus float agar clear, karena button di dalamnya float */
+    overflow: hidden; 
+}
+.reply-form textarea {
+    /* Menerapkan style yang sama dengan textarea utama */
+    min-height: 60px;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    background-color: #fff; /* Sedikit beda agar kontras dengan kontainer .post-main */
+}
+.reply-form textarea:focus {
+    background-color: #fff;
+}
+.reply-form button {
+    /* Mempertahankan style spesifiknya */
+    padding: 8px 18px;
+    font-size: 0.9em;
+    width: auto;
+    float: right;
+    
+    /* Menambahkan style tema dari tombol utama */
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+}
+.reply-form button:hover {
+    background-color: var(--accent-dark-color);
+}
+
+/* Calendar Specific Styles */
+/* ... (style calendar tidak berubah) ... */
