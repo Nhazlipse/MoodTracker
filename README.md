@@ -2,7 +2,7 @@
 
 Sebuah aplikasi web sederhana untuk mencatat mood harian dengan tampilan seperti buku diary. Aplikasi ini bersifat kolaboratif di mana pengguna bisa melihat dan berinteraksi dengan catatan di kalender bersama. Proyek ini dibangun sepenuhnya dengan PHP native untuk logika backend dan penyimpanan data berbasis file JSON.
 
-![Tangkapan Layar Aplikasi MoodTracker](https://imgur.com/a/Id7sonn)
+https://imgur.com/a/moodtracker-Id7sonn
 
 
 
@@ -35,7 +35,7 @@ Untuk menjalankan proyek ini di komputer lokal Anda, ikuti langkah-langkah berik
 
 1.  **Clone Repositori**:
     ```bash
-    git clone [https://github.com/](https://github.com/)[NAMA_USER_ANDA]/[NAMA_REPO_ANDA].git
+    git clone https://github.com/Nhazlipse/MoodTracker.git
     ```
 
 2.  **Pindahkan ke Server Lokal**:
