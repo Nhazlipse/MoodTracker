@@ -2,7 +2,7 @@
 
 Sebuah aplikasi web sederhana untuk mencatat mood harian dengan tampilan seperti buku diary. Aplikasi ini bersifat kolaboratif di mana pengguna bisa melihat dan berinteraksi dengan catatan di kalender bersama. Proyek ini dibangun sepenuhnya dengan PHP native untuk logika backend dan penyimpanan data berbasis file JSON.
 
-https://imgur.com/a/moodtracker-Id7sonn
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/Id7sonn"  ><a href="//imgur.com/a/Id7sonn">MoodTracker</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 
 
