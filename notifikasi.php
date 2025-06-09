@@ -46,6 +46,9 @@ if ($notifications_updated) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notifikasi - Mood Tracker</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -65,7 +68,7 @@ if ($notifications_updated) {
             <?php else: ?>
                 <?php foreach($user_notifications as $notif): ?>
                     <li class="notif-item">
-                        <a href="dashboard.php#post-<?= htmlspecialchars($notif['post_id']) ?>">
+                        <a href="index.php#post-<?= htmlspecialchars($notif['post_id']) ?>">
                             <div class="notif-message">
                                 <strong><?= htmlspecialchars($notif['actor_username']) ?></strong>
                                 <?= htmlspecialchars($notif['message']) ?>

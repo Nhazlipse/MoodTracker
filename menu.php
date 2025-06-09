@@ -23,7 +23,7 @@ if (isset($_SESSION['username'])) {
 
 <div style="position: relative;"> <ul class="main-nav">
         <li>
-            <a href="dashboard.php" class="<?= ($current_page == 'dashboard.php') ? 'active' : '' ?>">
+            <a href="dashboard.php" class="<?= ($current_page == 'index.php') ? 'active' : '' ?>">
                 Public Feed
             </a>
         </li>
